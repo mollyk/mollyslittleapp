@@ -1,0 +1,25 @@
+{
+  "name": "mollyslittleapp",
+  "version": "1.0.0",
+  "description": "it's just a little app",
+  "main": "lib/app.js",
+  "scripts": {
+	  "test": "NODE_ENV=test ./node_modules/.bin/mocha --compilers=coffee:coffee-script/register --recursive spec/unit spec/integration"
+  },
+  "repository": {
+    "type": "git",
+	"url": "git+https://github.com/mollyk/mollyslittleapp.git"
+  },
+  "author": "Molly",
+  "license": "ISC",
+ 
+  "dependencies": {
+    "koa": "^1.1.2"
+  },
+  "devDependencies": {
+	  "coffee-script": "^1.10.0",
+	  "mocha": "^2.4.5",
+	  "supertest": "^1.1.0",
+	  "supertest-as-promised": "^2.0.2"
+  }
+}
