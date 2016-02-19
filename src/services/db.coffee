@@ -1,6 +1,6 @@
 Sequelize = require "sequelize"
 config = require "config"
-debuglog = require"util".debuglog
+debuglog = require "util".debuglog
 DB_URL = config.get "db"
 
 module exports = (options, ctx) => {

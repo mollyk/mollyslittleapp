@@ -1,9 +1,10 @@
 module.exports = (sqlz, DataTypes) ->
 
-	User = sqlz.define "User",
-		name:
+	Post = sqlz.define "Post",
+		id:
 			type: DataTypes.STRING(40)
 			primaryKey: true
+		content:
+			type: DataTypes.TEXT
 
-		role: DataTypes.STRING
-		User
+	Post
