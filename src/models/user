@@ -1,0 +1,9 @@
+module.exports = (sqlz, DataTypes) ->
+
+	User = sqlz.define "User",
+		name:
+			type: DataTypes.STRING(40)
+			primaryKey: true
+
+		role: DataTypes.STRING
+		User
