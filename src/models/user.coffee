@@ -11,5 +11,4 @@ module.exports = (sqlz, DataTypes) ->
 
 		User [Symbol.for "SQLZ_ASSOC"] = (models) ->
 			User.belongTo(models.Role)
-			User.belongsTo(models.Post)
 	User
