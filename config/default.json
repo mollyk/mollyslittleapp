@@ -3,7 +3,7 @@
 		"name": "MollysLittleApp",
 		"port": 8008
 	},
-	"db": "mysql://mollysla:mollysla@localohost:3306/mollyslittleapp"
-	
+	"db": "mysql://mollysla:mollysla@localhost:3306/mollyslittleapp"
+
 
 }

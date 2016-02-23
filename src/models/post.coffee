@@ -1,3 +1,5 @@
+ASSOCIATE = Symbol.for "SQLZ_ASSOC"
+
 module.exports = (sqlz, DataTypes) ->
 
 	Post = sqlz.define "Post",
@@ -6,10 +8,12 @@ module.exports = (sqlz, DataTypes) ->
 			primaryKey: true
 		title:
 			type: DataTypes.STRING(50)
+			allowNull: no
 		content:
 			type: DataTypes.TEXT
+			allowNull: no
 
-	Post [Symbol.for "SQLZ_ASSOC"] = (models) ->
-			Post.belongTo(models.User)
+	Post[ASSOCIATE] = (models) ->
+			Post.belongsTo(models.User)
 
 	Post

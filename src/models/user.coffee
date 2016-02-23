@@ -1,14 +1,19 @@
+ASSOCIATE = Symbol.for "SQLZ_ASSOC"
+
 module.exports = (sqlz, DataTypes) ->
 
 	User = sqlz.define "User",
 		id:
-			type: DataTypes.STRING(40)
+			type: DataTypes.INTEGER
 			primaryKey: true
 			autoIncrement: true
-		name:
+			allowNull: no
+
+		username:
 			type: DataTypes.STRING(40)
 
 
-		User [Symbol.for "SQLZ_ASSOC"] = (models) ->
-			User.belongTo(models.Role)
+	User[ASSOCIATE] = (models) ->
+			User.belongsTo(models.Role)
+
 	User

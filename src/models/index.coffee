@@ -1,10 +1,11 @@
-associate = Symbol.for "SQLZ_ASSOC"
+ASSOCIATE = Symbol.for "SQLZ_ASSOC"
 
 module.exports = (sqlz) ->
 
 	sqlz.import "./#{m}" for m in [
 		"user"
-		"roles"
+		"role"
+		"post"
 	]
 
 	for m in sqlz.models when "function" is typeof m[associate]

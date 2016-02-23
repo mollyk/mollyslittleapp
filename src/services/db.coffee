@@ -1,17 +1,16 @@
 Sequelize = require "sequelize"
 config = require "config"
-debuglog = require "util".debuglog
+{debuglog} = require "util"
 DB_URL = config.get "db"
 
-module exports = (options, ctx) => {
+module.exports = (options, ctx) ->
 	sqlz = new Sequelize DB_URL, {
 		logging: debuglog "sql"
-		define: {
-			timestamps: true
-			underscored: true
-			underscoredAll: true
-		}
+		define:
+			timestamps: yes
+			underscored: yes
+			underscoredAll: yes
+
 	}
-	sqlz.import "#{_dirname}/../models/index"
+	require("../models") sqlz
 	sqlz
-}
