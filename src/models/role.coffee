@@ -11,6 +11,4 @@ module.exports = (sqlz, DataTypes) ->
 		title:
 			type: DataTypes.TEXT
 			allowNull: no
-
-
 	Role

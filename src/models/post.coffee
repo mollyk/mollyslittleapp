@@ -14,6 +14,6 @@ module.exports = (sqlz, DataTypes) ->
 			allowNull: no
 
 	Post[ASSOCIATE] = (models) ->
-			Post.belongsTo(models.User)
+		Post.belongsTo(models.User)
 
 	Post

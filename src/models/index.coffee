@@ -8,5 +8,5 @@ module.exports = (sqlz) ->
 		"post"
 	]
 
-	for m in sqlz.models when "function" is typeof m[associate]
-		m[associate] sqlz.models
+	for name, model of sqlz.models when "function" is typeof model[ASSOCIATE]
+		model[ASSOCIATE] sqlz.models

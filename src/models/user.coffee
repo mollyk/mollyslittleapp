@@ -14,6 +14,6 @@ module.exports = (sqlz, DataTypes) ->
 
 
 	User[ASSOCIATE] = (models) ->
-			User.belongsTo(models.Role)
+		User.belongsTo(models.Role)
 
 	User
