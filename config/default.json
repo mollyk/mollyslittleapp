@@ -1,7 +1,7 @@
 {
 	"app": {
 		"name": "MollysLittleApp",
-		"port": 8008
+		"port": 8080
 	},
 	"db": "mysql://mollysla:mollysla@localhost:3306/mollyslittleapp"
 

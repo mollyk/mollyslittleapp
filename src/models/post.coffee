@@ -4,7 +4,7 @@ module.exports = (sqlz, DataTypes) ->
 
 	Post = sqlz.define "Post",
 		id:
-			type: DataTypes.STRING(40)
+			type: DataTypes.UUID()
 			primaryKey: true
 		title:
 			type: DataTypes.STRING(50)
