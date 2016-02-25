@@ -1,6 +1,15 @@
-ASSOCIATE = Symbol.for "SQLZ_ASSOC"
+ASSOCIATE = Symbol.for("SQLZ_ASSOC");
+
+
+#const models = [
+#	"post",
+#	"role",
+#	"user"
+#];*/
 
 module.exports = (sqlz) ->
+
+
 
 	sqlz.import "./#{m}" for m in [
 		"user"
