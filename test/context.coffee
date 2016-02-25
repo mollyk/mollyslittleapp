@@ -1,5 +1,5 @@
 supertest = require "supertest-as-promised"
-ctx = module.exports = require "../src/context"
+ctx = module.exports = Object.assign({}, require "../src/context")
 config = require "config"
 app = require "../src/app"
 ctx.agent = (require "supertest-as-promised") app.callback()

@@ -1,25 +1,25 @@
-{"Post": {
-	"id": "",
+[{
+	"id": "d3b6601b-78b3-41f9-b8a1-82693c0f4032",
 	"title":"foobar",
 	"content": "bazbarbazbarbazbar"
 },
 {
-	"id": "",
+	"id": "8b36135d-6d98-4ebe-958d-d5adc7228a24",
 	"title":"barbaz",
 	"content": "foofoofoofoofoofoofoo"
 },
 {
-	"id": "",
+	"id": "c0cf8944-ba53-4cb5-ab84-87e784aaf64e",
 	"title":"bazfoo",
 	"content": "barbarbarbarbarbarbar"
 },
 {
-	"id": "",
+	"id": "2a555a03-927a-46c2-b5b8-410e54d8f6b9",
 	"title":"foobaz",
 	"content": "barbarbarbar"
 },
 {
-	"id": "",
+	"id": "c3d9fe3c-8064-41e5-86a9-0a43ede945de",
 	"title":"barfoo",
 	"content": "bazbazbazbazbazbazbaz"
-}}
+}]
