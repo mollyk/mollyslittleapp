@@ -5,7 +5,7 @@ option "-f", "--force", "Force db update"
 
 task "db-sync", "Sync database", (options) ->
 
-	{db} = require "./src/context"
+	{db} = require "./lib/context"
 	co ->
 		yield db.sync force: options.force
 		yield db.models.Role.bulkCreate [

@@ -2,7 +2,7 @@ ctx = require "../context"
 uuid = require "uuid"
 assert = require "assert"
 config = require "config"
-ctx.db = (require "../../src/services/db")(config.get("db"), ctx)
+ctx.db = (require "../../lib/services/db")(config.get("db"), ctx)
 ctx.models = ctx.db.models
 POSTS = require "../../data/posts.json"
 
