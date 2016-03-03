@@ -2,9 +2,9 @@ const ctx = require("../context");
 const config = require("config");
 ctx.db = require("../../lib/services/db")(config.get("db"), ctx);
 ctx.models = ctx.db.models;
-// const POSTS = require("../../data/posts.json");
 const assert = ctx.assert;
 const uuid = require("uuid");
+
 
 
 describe("GET /posts", () => {
@@ -27,9 +27,20 @@ describe("GET /posts/:id", () => {
 		return ctx.agent.get("/posts/${id}")
 		.then ( (res) => {
 			assert.equal(res.status, 200)
-			assert.ok((typeof res.body.post === "object") && (res.body.post !== null), "Post is object")
-			console.log(res.body.post);
-			assert.ok(Object.keys(res.body.post).length < 7 ,"One post shown");
+			assert.ok((typeof res.body.post === "object") && (res.body.post !== null), "Post is object");
+		});
+	});
+});
+
+describe("POST /posts", () =>{
+	it("Creates new post", () => {
+		return ctx.agent.post("/posts")
+		.send({ title: 'New Post Title',
+				content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' })
+		.then ( (res) => {
+			assert.ok(true, 'yeah')
+			assert.equal(res.status, 201)
+			assert.ok(res.body.new_post !== null, "The body is not null");
 		});
 	});
 });
