@@ -1,0 +1,9 @@
+{
+	"app": {
+		"name": "MollysLittleApp",
+		"port": 8090
+	},
+	"db": "mysql://mollysla:mollysla@localhost:3306/mollusla_test"
+
+
+}
